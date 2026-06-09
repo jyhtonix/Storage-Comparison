@@ -1,0 +1,135 @@
+<svg viewBox="0 0 900 650" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="900" height="650" fill="#0f1923" rx="12"/>
+
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#ff7040">NVMe SSD (PCIe)</text>
+  <text x="450" y="58" text-anchor="middle" font-size="13" fill="#8899aa">Architecture &amp; Block Diagram (M.2 / U.2 Form Factor)</text>
+
+  <defs>
+    <marker id="n1" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#ff7040"/></marker>
+    <marker id="n2" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#ff5522"/></marker>
+    <marker id="n3" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#60c6ff"/></marker>
+    <marker id="n4" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#e0a050"/></marker>
+    <marker id="n5" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#50e0a0"/></marker>
+    <marker id="n6" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#c8a0ff"/></marker>
+  </defs>
+
+  <line x1="460" y1="75" x2="460" y2="615" stroke="#2a3f55" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <!-- ===== PHYSICAL ARCHITECTURE (left) ===== -->
+  <text x="225" y="88" text-anchor="middle" font-size="14" font-weight="600" fill="#aaccee">M.2 2280 Form Factor (PCB View)</text>
+
+  <!-- M.2 PCB outline (22mm x 80mm, scaled) -->
+  <rect x="85" y="108" width="280" height="440" rx="6" fill="#0c1a0c" stroke="#2a5a1a" stroke-width="2"/>
+  <!-- M.2 key notch (M-key) -->
+  <rect x="310" y="532" width="55" height="16" rx="2" fill="#0f1923" stroke="#2a5a1a" stroke-width="1.5"/>
+  <text x="337" y="543" text-anchor="middle" font-size="8" fill="#556633">M-key</text>
+  <text x="225" y="130" text-anchor="middle" font-size="11" fill="#3a8a30">M.2 2280 PCB</text>
+
+  <!-- NAND Flash dice (2×3 grid) -->
+  <rect x="100" y="148" width="110" height="75" rx="5" fill="#0f2a1a" stroke="#50e0a0" stroke-width="2"/>
+  <text x="155" y="181" text-anchor="middle" font-size="10" font-weight="600" fill="#50e0a0">3D NAND</text>
+  <text x="155" y="194" text-anchor="middle" font-size="8" fill="#8899aa">Die 1 (128-layer)</text>
+
+  <rect x="240" y="148" width="110" height="75" rx="5" fill="#0f2a1a" stroke="#50e0a0" stroke-width="2"/>
+  <text x="295" y="181" text-anchor="middle" font-size="10" font-weight="600" fill="#50e0a0">3D NAND</text>
+  <text x="295" y="194" text-anchor="middle" font-size="8" fill="#8899aa">Die 2</text>
+
+  <rect x="100" y="243" width="110" height="75" rx="5" fill="#0f2a1a" stroke="#50e0a0" stroke-width="2"/>
+  <text x="155" y="276" text-anchor="middle" font-size="10" font-weight="600" fill="#50e0a0">3D NAND</text>
+  <text x="155" y="289" text-anchor="middle" font-size="8" fill="#8899aa">Die 3</text>
+
+  <rect x="240" y="243" width="110" height="75" rx="5" fill="#0f2a1a" stroke="#50e0a0" stroke-width="2"/>
+  <text x="295" y="276" text-anchor="middle" font-size="10" font-weight="600" fill="#50e0a0">3D NAND</text>
+  <text x="295" y="289" text-anchor="middle" font-size="8" fill="#8899aa">Die 4</text>
+
+  <!-- NVMe Controller (large, center) -->
+  <rect x="110" y="340" width="230" height="95" rx="8" fill="#1a0e00" stroke="#ff7040" stroke-width="2.5"/>
+  <text x="225" y="370" text-anchor="middle" font-size="14" font-weight="700" fill="#ff7040">NVMe Controller SoC</text>
+  <text x="225" y="386" text-anchor="middle" font-size="10" fill="#cc8866">PCIe Gen4 x4 interface</text>
+  <text x="225" y="400" text-anchor="middle" font-size="9" fill="#8899aa">64 queues × 64K entries, multi-core ARM</text>
+  <text x="225" y="414" text-anchor="middle" font-size="9" fill="#8899aa">FTL, wear leveling, LDPC ECC</text>
+
+  <!-- DRAM cache -->
+  <rect x="100" y="455" width="110" height="55" rx="5" fill="#0d1a2a" stroke="#e0a050" stroke-width="2"/>
+  <text x="155" y="476" text-anchor="middle" font-size="10" fill="#e0a050">LPDDR4 DRAM</text>
+  <text x="155" y="489" text-anchor="middle" font-size="9" fill="#8899aa">FTL map table</text>
+  <text x="155" y="501" text-anchor="middle" font-size="9" fill="#8899aa">256MB–4GB</text>
+
+  <!-- Power cap (optional) -->
+  <rect x="240" y="455" width="110" height="55" rx="5" fill="#0d1a2a" stroke="#c8a0ff" stroke-width="2"/>
+  <text x="295" y="476" text-anchor="middle" font-size="10" fill="#c8a0ff">Power Loss</text>
+  <text x="295" y="489" text-anchor="middle" font-size="9" fill="#8899aa">Protection</text>
+  <text x="295" y="501" text-anchor="middle" font-size="9" fill="#8899aa">(capacitors)</text>
+
+  <!-- M.2 edge connector -->
+  <rect x="145" y="528" width="110" height="18" rx="3" fill="#1a2a1a" stroke="#3a7030" stroke-width="1.5"/>
+  <text x="200" y="540" text-anchor="middle" font-size="9" fill="#5ac040">PCIe x4 + SMBus Pins</text>
+
+  <!-- PCIe lane signals -->
+  <line x1="225" y1="435" x2="225" y2="455" stroke="#ff7040" stroke-width="1.5"/>
+  <line x1="155" y1="435" x2="155" y2="455" stroke="#e0a050" stroke-width="1.5"/>
+  <line x1="295" y1="435" x2="295" y2="455" stroke="#c8a0ff" stroke-width="1.5"/>
+  <!-- NAND to controller lines -->
+  <line x1="155" y1="318" x2="185" y2="340" stroke="#2a7a40" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <line x1="295" y1="318" x2="265" y2="340" stroke="#2a7a40" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <line x1="155" y1="223" x2="185" y2="340" stroke="#2a7a40" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <line x1="295" y1="223" x2="265" y2="340" stroke="#2a7a40" stroke-width="1.5" stroke-dasharray="3,2"/>
+
+  <!-- ===== BLOCK DIAGRAM (right) ===== -->
+  <text x="672" y="88" text-anchor="middle" font-size="14" font-weight="600" fill="#aaccee">Block Diagram</text>
+
+  <!-- CPU / Host -->
+  <rect x="572" y="105" width="200" height="40" rx="6" fill="#1a0e00" stroke="#ff7040" stroke-width="2"/>
+  <text x="672" y="125" text-anchor="middle" font-size="13" font-weight="600" fill="#ff7040">CPU / Host (PCIe Root)</text>
+  <text x="672" y="140" text-anchor="middle" font-size="10" fill="#8899aa">Gen 4/5 x4 lanes · 7–14 GB/s</text>
+
+  <line x1="672" y1="145" x2="672" y2="175" stroke="#ff7040" stroke-width="2" marker-end="url(#n1)"/>
+
+  <!-- NVMe Protocol Layer -->
+  <rect x="572" y="175" width="200" height="40" rx="6" fill="#1a0e00" stroke="#ff5522" stroke-width="2"/>
+  <text x="672" y="195" text-anchor="middle" font-size="13" font-weight="600" fill="#ff5522">NVMe Protocol Layer</text>
+  <text x="672" y="209" text-anchor="middle" font-size="10" fill="#8899aa">64 queues, low-latency cmd dispatch</text>
+
+  <line x1="672" y1="215" x2="672" y2="245" stroke="#ff5522" stroke-width="2" marker-end="url(#n2)"/>
+
+  <!-- Multi-core Controller -->
+  <rect x="572" y="245" width="200" height="40" rx="6" fill="#1a0e00" stroke="#60c6ff" stroke-width="2"/>
+  <text x="672" y="265" text-anchor="middle" font-size="13" font-weight="600" fill="#60c6ff">Multi-core ARM Controller</text>
+  <text x="672" y="279" text-anchor="middle" font-size="10" fill="#8899aa">Parallel I/O, power mgmt, crypto</text>
+
+  <!-- DRAM side branch -->
+  <line x1="572" y1="265" x2="515" y2="265" stroke="#e0a050" stroke-width="1.5"/>
+  <rect x="455" y="248" width="60" height="35" rx="4" fill="#0d1a2a" stroke="#e0a050" stroke-width="1.5"/>
+  <text x="485" y="264" text-anchor="middle" font-size="9" fill="#e0a050">LPDDR4</text>
+  <text x="485" y="276" text-anchor="middle" font-size="9" fill="#8899aa">DRAM</text>
+
+  <line x1="672" y1="285" x2="672" y2="315" stroke="#60c6ff" stroke-width="2" marker-end="url(#n3)"/>
+
+  <!-- FTL + ECC -->
+  <rect x="572" y="315" width="200" height="40" rx="6" fill="#1a0e00" stroke="#e0a050" stroke-width="2"/>
+  <text x="672" y="335" text-anchor="middle" font-size="13" font-weight="600" fill="#e0a050">FTL + LDPC ECC Engine</text>
+  <text x="672" y="349" text-anchor="middle" font-size="10" fill="#8899aa">Wear level, GC, bad block mgmt</text>
+
+  <line x1="672" y1="355" x2="672" y2="385" stroke="#e0a050" stroke-width="2" marker-end="url(#n4)"/>
+
+  <!-- NAND Flash Interface -->
+  <rect x="572" y="385" width="200" height="40" rx="6" fill="#1a0e00" stroke="#50e0a0" stroke-width="2"/>
+  <text x="672" y="405" text-anchor="middle" font-size="13" font-weight="600" fill="#50e0a0">ONFI / Toggle NAND I/F</text>
+  <text x="672" y="419" text-anchor="middle" font-size="10" fill="#8899aa">Parallel channel I/O (8–16 channels)</text>
+
+  <line x1="672" y1="425" x2="672" y2="455" stroke="#50e0a0" stroke-width="2" marker-end="url(#n5)"/>
+
+  <!-- 3D NAND Array -->
+  <rect x="562" y="455" width="220" height="75" rx="6" fill="#0f2a1a" stroke="#50e0a0" stroke-width="2"/>
+  <text x="672" y="478" text-anchor="middle" font-size="12" font-weight="600" fill="#50e0a0">3D NAND Flash Array</text>
+  <text x="672" y="494" text-anchor="middle" font-size="10" fill="#8899aa">128–232 layer V-NAND / BiCS</text>
+  <text x="672" y="508" text-anchor="middle" font-size="10" fill="#8899aa">TLC / QLC cells — die stacking</text>
+  <text x="672" y="522" text-anchor="middle" font-size="10" fill="#8899aa">Multiple planes per die (2–4)</text>
+
+  <!-- PCIe bandwidth callout -->
+  <rect x="562" y="555" width="220" height="40" rx="6" fill="#1a0a00" stroke="#ff7040" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="672" y="573" text-anchor="middle" font-size="11" fill="#ff7040">PCIe Gen4 x4 Bandwidth</text>
+  <text x="672" y="588" text-anchor="middle" font-size="10" fill="#cc8866">~7 GB/s seq · &lt;100 μs latency</text>
+
+  <text x="450" y="635" text-anchor="middle" font-size="11" fill="#445566">© Storage Architecture Reference — NVMe SSD</text>
+</svg>
