@@ -22,3 +22,6 @@ Reliability --- Shock resistance, write endurance, MTBF, data retention
 Power & Thermal --- Idle/active wattage, noise
 Use Cases --- Ideal workloads, OS support, encryption
 Star Ratings --- Quick-glance performance tier summary
+
+To access the webpage: https://jyhtonix.github.io/Storage-Comparison/index.html
+
